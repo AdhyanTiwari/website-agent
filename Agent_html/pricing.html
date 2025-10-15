@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Agentiqa</title>
+    <meta name="description" content="Choose the perfect AI solution for your business. Flexible pricing plans designed for companies of all sizes.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<base target="_blank">
+</head>
+<body>
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Agentiqa</a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="contain-modified">
+            <div class="hero-content text-center">
+                <h1>Choose Your AI Solution</h1>
+                <p>Flexible pricing plans designed to scale with your business needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-toggle text-center fade-in">
+                <div class="toggle-container">
+                    <button class="toggle-btn active" id="monthly-toggle">Monthly</button>
+                    <button class="toggle-btn" id="yearly-toggle">Yearly</button>
+                </div>
+                <p class="toggle-note">Save up to 20% with yearly billing</p>
+            </div>
+            
+            <div class="pricing-grid" id="pricing-grid">
+                <!-- Pricing cards will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our AI services and pricing</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Can I change my plan anytime?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate the billing accordingly.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, and bank transfers for enterprise customers. All payments are processed securely.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Is there a free trial available?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 14-day free trial for all plans. No credit card required to start your trial.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>What kind of support do you provide?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide email support for Starter plans, priority email and chat for Pro plans, and 24/7 phone support with dedicated account managers for Enterprise customers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>How secure is my data?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your data is protected with enterprise-grade security including encryption at rest and in transit, regular security audits, and compliance with GDPR and other regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center fade-in">
+                <h2>Ready to Get Started?</h2>
+                <p>Choose the perfect plan for your business and start transforming with AI today</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+                    <a href="services.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Agentiqa</div>
+            <p class="footer-text">
+                Empowering businesses with intelligent AI solutions that drive growth and innovation.
+            </p>
+            
+            <div class="social-links">
+                <a href="https://github.com/agentiqaai-bit" class="social-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" title="Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <p class="footer-copyright">
+                © 2024 Agentiqa. All rights reserved. Empowering the future of AI.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    
+    <style>
+        /* Additional styles for pricing page */
+        .page-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(6, 182, 212, 0.1));
+        }
+        
+        .page-hero h1 {
+            margin-bottom: 1rem;
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pricing-section {
+            padding: 6rem 0;
+        }
+        
+        .pricing-toggle {
+            margin-bottom: 3rem;
+        }
+        
+        .toggle-container {
+            display: inline-flex;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 50px;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .toggle-btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+        
+        .toggle-btn.active {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            color: white;
+            box-shadow: var(--glow-purple);
+        }
+        
+        .toggle-note {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-purple);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-purple);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-cyan));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .savings {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .plan-billing {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .plan-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .plan-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-cyan);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .faq-section {
+            padding: 6rem 0;
+            background: rgba(6, 182, 212, 0.05);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .faq-icon {
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+        
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .page-hero {
+                padding: 6rem 1rem 3rem;
+            }
+        }
+    </style>
+    
+    <script>
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
